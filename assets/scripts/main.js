@@ -95,7 +95,7 @@ function initFormHandler() {
 		const docMain = document.querySelector('main');
 		docMain.append(newCard);
 		// B9
-		const curRecipeArray = JSON.parse(window.localStorage.getItem('recipes'));
+		const curRecipeArray = getRecipesFromStorage();
 		curRecipeArray.push(recipeObject);
 		saveRecipesToStorage(curRecipeArray);
 	});
